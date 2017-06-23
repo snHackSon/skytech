@@ -102,16 +102,16 @@ section#articles{
     border-radius: 15px;
     margin: 20px 0;
 
-    a.article-link{
+    .article-link{
       height: 300px;
       width: 200px;
       .article-hover{
         background: fade-out($themePrimary, .2);
         position: absolute;
-        // opacity: 0;
+        opacity: 0;
         border-radius: 13px 13px 0 0;
-        // width: 92.5%;
-        // height: 51.2%;
+        width: 92.5%;
+        height: 51.2%;
         color: white;
         font-size: 100px;
 
@@ -130,6 +130,7 @@ section#articles{
     }
     
     img{
+      cursor: pointer;
       border-radius: 13px 13px 0 0;
 
     }

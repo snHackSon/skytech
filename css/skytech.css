@@ -66,23 +66,27 @@ section#articles {
     background-color: white;
     border-radius: 15px;
     margin: 20px 0; }
-    section#articles .article-item a.article-link {
+    section#articles .article-item .article-link {
       height: 300px;
       width: 200px; }
-      section#articles .article-item a.article-link .article-hover {
+      section#articles .article-item .article-link .article-hover {
         background: rgba(13, 71, 161, 0.8);
         position: absolute;
+        opacity: 0;
         border-radius: 13px 13px 0 0;
+        width: 92.5%;
+        height: 51.2%;
         color: white;
         font-size: 100px;
         transition: all ease 0.8s;
         -webkit-transition: all ease 0.8s;
         -moz-transition: all ease 0.8s; }
-        section#articles .article-item a.article-link .article-hover i {
+        section#articles .article-item .article-link .article-hover i {
           margin-top: 17%; }
-        section#articles .article-item a.article-link .article-hover:hover {
+        section#articles .article-item .article-link .article-hover:hover {
           opacity: 1; }
     section#articles .article-item img {
+      cursor: pointer;
       border-radius: 13px 13px 0 0; }
     section#articles .article-item .article-text {
       padding: 5px 0;
