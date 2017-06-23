@@ -1,0 +1,189 @@
+@import 'variables';
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active{
+  color: $themePrimary;
+}
+
+// Navbar
+.navbar-custom{
+  background-color: transparent;
+  border-color: transparent;
+  .navbar-brand{
+    font-family: 'Pacifico', cursive;
+  }
+  .hoverNav{
+    &:hover,&:active,&:focus{
+      background-color: white !important;
+      color: $themePrimary;
+      border-radius: 10px;
+    }
+  }
+  .navbar-header{
+    a{
+      color: white;
+      font-size: $bigText;
+      @extend .hoverNav;
+    }
+  }
+  .navbar-nav{
+    li{
+      a{
+        @extend .hoverNav;
+        color: $themePrimary;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  .navbar-nav>.active>a{
+    background-color: white;
+    color: themePrimary;
+    border-radius: 10px;
+  }
+  .navbar-nav>.active>a:hover,
+  .navbar-nav>.active>a:focus{
+    background-color: white;
+    color: themePrimary;
+    color: themePrimary;
+  }
+}
+
+// Header
+header{
+  background-image: url('../img/face2.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+
+  .intro-text{
+    // background-color: $themePrimary;
+    // color: $themeSecond;
+    margin-top: 30%; 
+    font-size: 60px;
+  }
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+  height: 100%;
+}
+
+// Sections
+
+// info
+section#info{
+  // max-height: 100%;
+  background-color: white;
+}
+
+// Footer
+footer{
+  background-color: $themePrimary;
+  color: white;
+  .btn-social{
+    a{
+      font-size: 40px;
+      color: white;
+      margin: 0px 10px;
+      padding: 10px 15px;
+      background-color: $themeSecond;
+      border-radius: 50px;
+      border-color: white;
+    }
+  }
+  .end{
+    background-color: $themeSecond;
+    padding: 20px 0;
+  }
+}
+
+// Changes at scrolling
+@media(min-width:768px){
+  .navbar-custom{
+    background-color: transparent;
+    padding: 25px 0px;
+    -webkit-transition: background .2s ease-in-out, padding .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out,padding .2s ease-in-out;
+    transition: background .2s ease-in-out,padding .2s ease-in-out;
+  }
+  .top-nav-collapse {
+    padding: 0;
+  }
+}
+
+@media(min-width:768px){
+  .navbar-custom.affix{
+    background-color:$themePrimary;
+    padding: 10px 0px;
+    .navbar-nav{
+      a{
+        color: white;
+      }
+    }
+    .navbar-nav>.active>a{
+      color: $themePrimary !important;
+    }
+    .navbar-nav>.active>a:hover,
+    .navbar-nav>.active>a:focus{
+      color: $themePrimary !important;
+    }
+
+  }
+}
+
+@media(max-width:768px){
+  .navbar-custom{
+    padding: 5px 0;
+    background-color: $themePrimary;
+    border: transparent;
+    .navbar-toggle{  
+      background-color: white;
+      font-size: 15px;
+      &:hover, &:focus, &:active{
+        @extend .navbar-toggle;
+      }
+    }
+    .navbar-collapse{
+      color: white;
+      &:hover, &:focus, &:active{
+        @extend .navbar-collapse;
+      }
+    }
+    .nav{
+      li{
+        a{
+          color: white;
+        }
+      }
+    }
+    .navbar-nav>.active>a{
+      color: $themePrimary !important;
+    }
+    .navbar-nav>.active>a:hover,
+    .navbar-nav>.active>a:focus{
+      color: $themePrimary !important;
+    }
+  }
+}
+
+@media(min-width:992px){
+  .navbar-custom.affix{
+    background-color:$themePrimary !important;
+  }
+}
