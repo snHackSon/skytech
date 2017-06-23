@@ -42,7 +42,7 @@ a.active{
     li{
       a{
         @extend .hoverNav;
-        color: $themePrimary;
+        color: white;
         font-size: 16px;
         font-weight: bold;
       }
@@ -63,15 +63,13 @@ a.active{
 
 // Header
 header{
-  background-image: url('../img/face2.jpeg');
+  background-image: url('../img/header-skytech.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
 
   .intro-text{
-    // background-color: $themePrimary;
-    // color: $themeSecond;
-    margin-top: 30%; 
+    margin-top: 30%;
     font-size: 60px;
   }
 
@@ -86,10 +84,65 @@ header{
 
 // Sections
 
+section{
+  padding: 100px 0;
+}
+
 // info
 section#info{
-  // max-height: 100%;
   background-color: white;
+}
+
+// Aticles
+section#articles{
+  background-color: darken(white, 8%);
+  .article-item{
+
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px 0;
+
+    a.article-link{
+      height: 300px;
+      width: 200px;
+      .article-hover{
+        background: fade-out($themePrimary, .2);
+        position: absolute;
+        // opacity: 0;
+        border-radius: 13px 13px 0 0;
+        // width: 92.5%;
+        // height: 51.2%;
+        color: white;
+        font-size: 100px;
+
+        i{
+          margin-top: 17%;
+        }
+
+        transition: all ease 0.8s;
+        -webkit-transition: all ease 0.8s;
+        -moz-transition: all ease 0.8s;
+        
+        &:hover {
+            opacity: 1; 
+        }
+      }
+    }
+    
+    img{
+      border-radius: 13px 13px 0 0;
+
+    }
+    
+    .article-text{
+      padding: 5px 0;
+      margin: 15px;
+      font-family: 'Arvo', serif;
+      text-align: justify;
+      font-size: 16px;
+    }
+  
+  }
 }
 
 // Footer
@@ -98,6 +151,13 @@ footer{
   color: white;
   .btn-social{
     a{
+      i{
+        transition: all ease 0.8s;
+        &:hover{
+          transform: scale(1.6);
+        }
+      }
+
       font-size: 40px;
       color: white;
       margin: 0px 10px;
@@ -106,6 +166,9 @@ footer{
       border-radius: 50px;
       border-color: white;
     }
+  }
+  .footer{
+    padding: 40px 0;
   }
   .end{
     background-color: $themeSecond;
@@ -124,6 +187,12 @@ footer{
   }
   .top-nav-collapse {
     padding: 0;
+  }
+}
+
+@media(min-width:768px){
+  section{
+    padding: 100px 0;
   }
 }
 
@@ -187,3 +256,5 @@ footer{
     background-color:$themePrimary !important;
   }
 }
+
+// Animations

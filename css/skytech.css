@@ -25,7 +25,7 @@ a.active {
     color: white;
     font-size: 40px; }
   .navbar-custom .navbar-nav li a {
-    color: #0d47a1;
+    color: white;
     font-size: 16px;
     font-weight: bold; }
   .navbar-custom .navbar-nav > .active > a {
@@ -39,7 +39,7 @@ a.active {
     color: themePrimary; }
 
 header {
-  background-image: url("../img/face2.jpeg");
+  background-image: url("../img/header-skytech.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -54,8 +54,42 @@ header {
     margin-top: 30%;
     font-size: 60px; }
 
+section {
+  padding: 100px 0; }
+
 section#info {
   background-color: white; }
+
+section#articles {
+  background-color: #ebebeb; }
+  section#articles .article-item {
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px 0; }
+    section#articles .article-item a.article-link {
+      height: 300px;
+      width: 200px; }
+      section#articles .article-item a.article-link .article-hover {
+        background: rgba(13, 71, 161, 0.8);
+        position: absolute;
+        border-radius: 13px 13px 0 0;
+        color: white;
+        font-size: 100px;
+        transition: all ease 0.8s;
+        -webkit-transition: all ease 0.8s;
+        -moz-transition: all ease 0.8s; }
+        section#articles .article-item a.article-link .article-hover i {
+          margin-top: 17%; }
+        section#articles .article-item a.article-link .article-hover:hover {
+          opacity: 1; }
+    section#articles .article-item img {
+      border-radius: 13px 13px 0 0; }
+    section#articles .article-item .article-text {
+      padding: 5px 0;
+      margin: 15px;
+      font-family: 'Arvo', serif;
+      text-align: justify;
+      font-size: 16px; }
 
 footer {
   background-color: #0d47a1;
@@ -68,6 +102,12 @@ footer {
     background-color: #2196f3;
     border-radius: 50px;
     border-color: white; }
+    footer .btn-social a i {
+      transition: all ease 0.8s; }
+      footer .btn-social a i:hover {
+        transform: scale(1.6); }
+  footer .footer {
+    padding: 40px 0; }
   footer .end {
     background-color: #2196f3;
     padding: 20px 0; }
@@ -82,6 +122,9 @@ footer {
 
   .top-nav-collapse {
     padding: 0; } }
+@media (min-width: 768px) {
+  section {
+    padding: 100px 0; } }
 @media (min-width: 768px) {
   .navbar-custom.affix {
     background-color: #0d47a1;
